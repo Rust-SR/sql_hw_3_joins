@@ -356,13 +356,13 @@ join salary on employee_salary.salary_id = salary.id
 where role_name like '%Senior%';
 
 -- 15. Вывести зарплаты Java разработчиков
- select salary.monthly_salary
- from roles_employee
- full join roles on roles.id = roles_employee.role_id
- full join employee_salary on roles_employee.id = employee_salary.id
- join employees on employees.id = employee_salary.employee_id 
- full join salary on salary.id = employee_salary.salary_id 
- where role_name like '%Java developer';
+select salary.monthly_salary
+from roles_employee
+full join roles on roles.id = roles_employee.role_id
+full join employee_salary on roles_employee.id = employee_salary.id
+join employees on employees.id = employee_salary.employee_id 
+full join salary on salary.id = employee_salary.salary_id 
+where role_name like '%Java developer';
 
 -- 16. Вывести зарплаты Python разработчиков
 select roles.role_name, salary.monthly_salary 
